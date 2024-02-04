@@ -1,10 +1,9 @@
 import axios from 'axios';
 import { encode } from 'base-64';
+import { WoocommerceUserName, WoocommercePassword } from '../../config';
 
 const list = async (page: Number, perPage: Number, search: any) => {
-    const username = 'ck_ba71fde15a916827fab04f79905c37399c28d227';
-    const password = 'cs_e6a12fae81e7b990885e94a21984251413c3e2e9';
-    const base64Credentials = encode(`${username}:${password}`);
+    const base64Credentials = encode(`${WoocommerceUserName}:${WoocommercePassword}`);
     const apiUrl = 'https://dietgeine.com/woocoom/wp-json/wc/v3/products';
 
     let response = await axios.get(apiUrl, {
@@ -23,9 +22,7 @@ const list = async (page: Number, perPage: Number, search: any) => {
 }
 
 const view = async (productId: Number) => {
-    const username = 'ck_ba71fde15a916827fab04f79905c37399c28d227';
-    const password = 'cs_e6a12fae81e7b990885e94a21984251413c3e2e9';
-    const base64Credentials = encode(`${username}:${password}`);
+    const base64Credentials = encode(`${WoocommerceUserName}:${WoocommercePassword}`);
     const apiUrl = 'https://dietgeine.com/woocoom/wp-json/wc/v3/products/' + productId;
 
     let response = await fetch(apiUrl, {
