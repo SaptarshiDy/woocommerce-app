@@ -4,7 +4,9 @@ import { Rating, AirbnbRating } from 'react-native-ratings';
 
 import Product from '../../services/product';
 
-const isCloseToBottom = ({layoutMeasurement, contentOffset, contentSize}) => {
+import Loading from '../../components/Loading';
+
+const isCloseToBottom = ({layoutMeasurement, contentOffset, contentSize} : any) => {
     const paddingToBottom = 0;
     return layoutMeasurement.height + contentOffset.y >=
       contentSize.height - paddingToBottom;
@@ -16,7 +18,7 @@ const Landing = (props: any) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const fetchProducts = async () => {
-        let response = await Product.list(currentPage, 10, null);
+        let response = await Product.list(currentPage, 50, null);
         setProducts(prevState => [...prevState, ...response]);
     }
 
@@ -29,11 +31,7 @@ const Landing = (props: any) => {
 
             <Header
                 onSearch={(query: String) => {
-                    // if (query.length !== 0) {
-                    //     setProducts([]);
-                    //     setCurrentPage(0);
-                    //     fetchProducts(query)
-                    // }
+                    //products.length !== 0
                 }}
             />
 
@@ -48,13 +46,14 @@ const Landing = (props: any) => {
                         flexDirection: 'row',
                         flexWrap: 'wrap',
                         flexShrink: 1,
+                        paddingBottom: 60,
                     }}
                     className='flex-row flex-wrap'
                     onScroll={({nativeEvent}) => {
-                        if (isCloseToBottom(nativeEvent)) {
-                            setCurrentPage(currentPage + 1);
-                            fetchProducts();
-                        }
+                        // if (isCloseToBottom(nativeEvent)) {
+                        //     setCurrentPage(currentPage + 1);
+                        //     fetchProducts();
+                        // }
                     }}
                     scrollEventThrottle={400}
                 >
@@ -65,9 +64,9 @@ const Landing = (props: any) => {
                                 className='left-0 top-0 h-1/2 w-1/2 p-2'
                             >
 
-                                <View className='flex gap-1 p-2'>
+                                <View className='flex gap-y-2 p-2 rounded'>
                                     <Image
-                                        className='h-48'
+                                        className='h-48 rounded'
                                         source={{
                                             uri: product.images[0].src,
                                         }}
@@ -80,7 +79,7 @@ const Landing = (props: any) => {
                                     >
                                         {product.name}
                                     </Text>
-                                    <Text numberOfLines={1}>
+                                    <Text className='text-gray-500' numberOfLines={1}>
                                         {product.description.replace(/<[^>]*>?/gm, '')}
                                     </Text>
                                     <Text className='font-semibold text-gray-700 text-base'>
@@ -126,7 +125,7 @@ const Landing = (props: any) => {
                 </ScrollView>
                 :
                 <View>
-                    <Text>Loading</Text>
+                    <Loading />
                 </View>
             }
         </View>
@@ -147,6 +146,7 @@ const Header = ({onSearch}) => {
                 }}
                 className='my-0 border-2 border-[#7b51ad] rounded-lg text-lg px-4'
                 placeholder='Looking for somthing'
+                placeholderTextColor="#6b6b6b" 
             />
         </View>
     )
