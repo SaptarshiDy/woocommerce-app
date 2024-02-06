@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {Alert, Modal, StyleSheet, Text, Pressable, View, ActivityIndicator} from 'react-native';
+import { Alert, Modal, StyleSheet, Text, Pressable, View, ActivityIndicator } from 'react-native';
 
 const Loading = () => {
     const [modalVisible, setModalVisible] = useState(true);
