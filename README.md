@@ -1,6 +1,6 @@
-# React Native Ecommerce App Based on WooCommerce Rest Apis
+# React Native Ecommerce App
 
-Internally, we use woocommerce apis.
+Based on WooCommerce Rest Apis.
 
 ### Application Screenshots
 
