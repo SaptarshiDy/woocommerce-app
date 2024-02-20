@@ -4,8 +4,8 @@ Internally, we use woocommerce apis.
 
 ### Application Screenshots
 
-| Product List               | Product Details               |
-|-----------------------|-----------------------|-----------------------|
+| Product List | Product Details |
+|-----------------------|-----------------------|
 | ![Product List](https://img.playbook.com/w-YB62Bh36UhASlrKnELEEkHCAhEHeV9v0F7UmSwVsg/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljL2FkYjY4NzJk/LTRjNDctNDAwYi05/YzY1LTY2YjBhZmI2/MzNlMA)  | ![Product Details](https://img.playbook.com/HMeBs6jSTqm0mRLOM85V5P7MWKC5m7kxHdRsb34bMbw/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzU4MjVhMDA0/LTk4ZWEtNDYyYy04/YzkwLTYxOGNjZTRm/OWVjYg)  |
 
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
