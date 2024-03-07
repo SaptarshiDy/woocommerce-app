@@ -14,7 +14,7 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 const TabScreens = () => {
