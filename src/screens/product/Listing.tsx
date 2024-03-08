@@ -96,14 +96,14 @@ const Landing = (props: any) => {
                                         </Text>
 
                                         {/* <View className='flex justify-start items-start'>
-                                        <Rating
-                                            showRating={false}
-                                            ratingCount={5}
-                                            imageSize={18}
-                                            startingValue={product.average_rating}
-                                            fractions={2}
-                                        />
-                                    </View> */}
+                                            <Rating
+                                                showRating={false}
+                                                ratingCount={5}
+                                                imageSize={18}
+                                                startingValue={product.average_rating}
+                                                fractions={2}
+                                            />
+                                        </View> */}
 
                                         <Pressable onPress={() => {
                                             props.navigation.navigate('ProductView', { productId: product.id })

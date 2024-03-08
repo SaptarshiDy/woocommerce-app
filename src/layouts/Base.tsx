@@ -16,9 +16,11 @@ export default (props: any) => {
 
     return (
         <>
-            {props.children}
             {
-                auth.loading && <Loading/>
+                auth.loading ?
+                <Loading/>
+                :
+                props.children
             }
         </>
     );

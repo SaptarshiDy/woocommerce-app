@@ -3,7 +3,6 @@ import { Text, View, TextInput, Pressable } from "react-native";
 import Customer from '../../services/customer';
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { loginRequest, logoutRequest } from '../../redux/slices/auth';
-import BaseLayout from '../../layouts/Base';
 
 const Login = (auth: Object) => {
 
@@ -12,7 +11,6 @@ const Login = (auth: Object) => {
     const dispatch = useAppDispatch();
 
     return (
-        <BaseLayout>
             <View className="flex flex-col justify-center items-center h-screen p-4">
 
                 <View className="w-full mt-4">
@@ -59,7 +57,6 @@ const Login = (auth: Object) => {
                 </View>
 
             </View>
-        </BaseLayout>
     );
 }
 

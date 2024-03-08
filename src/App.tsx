@@ -1,9 +1,21 @@
 import React from 'react';
 import { store } from '../src/redux/store';
 import { Provider } from "react-redux";
-import Guest from './layouts/Guest';
-import Auth from './layouts/Auth';
 
-const App = () => <Provider store={store}><Auth/></Provider>;
+import BaseLayout from './layouts/Base';
+import AuthLayout from './layouts/Auth';
+import GuestLayout from './layouts/Guest';
+
+const App = () => {
+    return (
+        <>
+            <Provider store={store}>
+                <BaseLayout>
+                    <AuthLayout/>
+                </BaseLayout>
+            </Provider>
+        </>
+    )
+};
 
 export default App;

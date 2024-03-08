@@ -14,8 +14,6 @@ import AntDesignIcon from 'react-native-vector-icons/AntDesign';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 
-import { View } from 'react-native';
-
 const Tab = createBottomTabNavigator();
 const TabScreens = () => {
     return (
@@ -30,14 +28,14 @@ const TabScreens = () => {
                 options={{
                     tabBarIcon: ({ size, focused, color }) => {
                         return (
-                            <View>
+                            <>
                                 <AntDesignIcon 
                                     name="home"
                                     size={30}
                                     color={focused ? '#7b51ad' : '#000'}
                                 >
                                 </AntDesignIcon>
-                            </View>
+                            </>
                         );
                     },
                     tabBarStyle: { 
@@ -53,14 +51,14 @@ const TabScreens = () => {
                 options={{
                     tabBarIcon: ({ size, focused, color }) => {
                         return (
-                            <View>
+                            <>
                                 <MaterialIcon 
                                     name="backup-table"
                                     size={30}
                                     color={focused ? '#7b51ad' : '#000'}
                                 >
                                 </MaterialIcon>
-                            </View>
+                            </>
                         );
                     },
                     tabBarStyle: { 
@@ -76,14 +74,14 @@ const TabScreens = () => {
                 options={{
                     tabBarIcon: ({ size, focused, color }) => {
                         return (
-                            <View>
+                            <>
                                 <FeatherIcon 
                                     name="user"
                                     size={30}
                                     color={focused ? '#7b51ad' : '#000'}
                                 >
                                 </FeatherIcon>
-                            </View>
+                            </>
                         );
                     },
                     tabBarStyle: { 
@@ -99,14 +97,14 @@ const TabScreens = () => {
                 options={{
                     tabBarIcon: ({ size, focused, color }) => {
                         return (
-                            <View>
+                            <>
                                 <FeatherIcon 
                                     name="shopping-cart"
                                     size={30}
                                     color={focused ? '#7b51ad' : '#000'}
                                 >
                                 </FeatherIcon>
-                            </View>
+                            </>
                         );
                     },
                     tabBarStyle: { 

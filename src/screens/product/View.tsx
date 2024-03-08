@@ -22,7 +22,6 @@ const Landing = (props: any) => {
     const { width, height } = Dimensions.get('window');
 
     return (
-
         product ?
             <View className='flex-1'>
 
@@ -31,7 +30,7 @@ const Landing = (props: any) => {
 
                     <Pressable
                         className='bg-gray-300 rounded flex-none justify-center items-center px-4 mr-2'
-                        onPress={() => { 
+                        onPress={() => {
                             props.navigation.goBack();
                         }}
                     >
@@ -45,74 +44,74 @@ const Landing = (props: any) => {
 
                     <View className='flex-1'>
                         <Search
-                            onSearch={() => {}}
+                            onSearch={() => { }}
                         >
                         </Search>
                     </View>
 
                     {/* <Pressable
-                        className='px-3 py-4 bg-slate-400 rounded flex-1 mx-3'
-                        onPress={() => { 
-                            props.navigation.goBack();
-                        }}
-                    >
-                        <Text className='text-center text-black'>
-                            Search
-                        </Text>
-                    </Pressable> */}
+                            className='px-3 py-4 bg-slate-400 rounded flex-1 mx-3'
+                            onPress={() => { 
+                                props.navigation.goBack();
+                            }}
+                        >
+                            <Text className='text-center text-black'>
+                                Search
+                            </Text>
+                        </Pressable> */}
 
                 </View>
                 {/* End */}
 
                 <ScrollView
-                        showsVerticalScrollIndicator={false}
-                        contentContainerStyle={{
-                            flexShrink: 1,
-                            paddingBottom: 60,
-                        }}
-                        className='flex-row flex-wrap'
-                    >
-                        <View>
-                            <FlatList
-                                horizontal={true}
-                                pagingEnabled={true}
-                                showsHorizontalScrollIndicator={false}
-                                data={product.images}
-                                keyExtractor={item => item.id}
-                                renderItem={({ item }) => {
-                                    return (
-                                        <View
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{
+                        flexShrink: 1,
+                        paddingBottom: 60,
+                    }}
+                    className='flex-row flex-wrap'
+                >
+                    <View>
+                        <FlatList
+                            horizontal={true}
+                            pagingEnabled={true}
+                            showsHorizontalScrollIndicator={false}
+                            data={product.images}
+                            keyExtractor={item => item.id}
+                            renderItem={({ item }) => {
+                                return (
+                                    <View
+                                        style={{
+                                            width: width,
+                                            height: height / 2,
+                                        }}
+                                    >
+                                        <Image
                                             style={{
-                                                width: width,
-                                                height: height / 2,
+                                                flex: 1,
+                                                width: null,
+                                                height: null,
+                                                resizeMode: 'cover',
                                             }}
-                                        >
-                                            <Image
-                                                style={{
-                                                    flex: 1,
-                                                    width: null,
-                                                    height: null,
-                                                    resizeMode: 'cover',
-                                                }}
-                                                source={{
-                                                    uri: item.src,
-                                                }}
-                                            />
-                                        </View>
-                                    )
-                                }}
-                            />
-                        </View>
+                                            source={{
+                                                uri: item.src,
+                                            }}
+                                        />
+                                    </View>
+                                )
+                            }}
+                        />
+                    </View>
 
-                        <View className='p-4'>
-                            <Text className='text-xl font-bold'>
-                                {product.name}
-                            </Text>
-                            <Text className='text-base'>
-                                {product.description.replace(/<[^>]*>?/gm, '')}
-                            </Text>
-                        </View>
-                    </ScrollView>
+                    <View className='p-4'>
+                        <Text className='text-xl font-bold'>
+                            {product.name}
+                        </Text>
+                        <Text className='text-base'>
+                            {product.description.replace(/<[^>]*>?/gm, '')}
+                        </Text>
+                    </View>
+                </ScrollView>
 
                 {/* Footer */}
                 <View className='absolute left-0 right-0 bottom-0 flex flex-row bg-white w-full py-1'>
