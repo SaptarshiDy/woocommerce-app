@@ -5,9 +5,9 @@ import BaseLayout from '../../layouts/Base';
 
 export default () => {
     return (
-        <View>
+        <View className="flex flex-row justify-center items-center h-screen">
             <Text>
-                Product Categories
+                Coming Soon
             </Text>
         </View>
     );

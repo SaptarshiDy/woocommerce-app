@@ -3,9 +3,9 @@ import { Text, View } from "react-native";
 
 export default () => {
     return (
-        <View>
+        <View className="flex flex-row justify-center items-center h-screen">
             <Text>
-                User Cart
+                Coming Soon
             </Text>
         </View>
     );
