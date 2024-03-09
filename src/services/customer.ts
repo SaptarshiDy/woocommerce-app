@@ -86,7 +86,7 @@ const session = async () => {
                             name: res.data.name,
                             username: customer.username,
                             email: customer.email,
-                            profileImage: res.data.avatar_urls[res.data.avatar_urls.length - 1],
+                            profileImage: res.data.avatar_urls[96],
                         }
                     }
                 }

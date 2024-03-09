@@ -11,7 +11,6 @@ export const loginRequest = createAsyncThunk('user/login', async ({ email, passw
 });
 
 export const retriveSession = createAsyncThunk('user/session/retrive', async () => {
-    console.log('Splash')
     const reponse = await Customer.session();
     return reponse; 
 });
