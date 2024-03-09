@@ -7,6 +7,7 @@ Based on WooCommerce Rest Apis.
 | Product List | Product Details |
 |-----------------------|-----------------------|
 | ![Product List](https://img.playbook.com/oIQnUzGVJMcFNG5girvcOOwzjFcfhoYFYzVgMSSEHIE/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzU0NGY3MTlm/LWJkNGItNDJkOC04/MjcyLTgzZDc0ZjIy/NGE0NQ)  | ![Product Details](https://img.playbook.com/Kf4zQH0oSXPzmU47fogkoE3a2ILa4irVwhlgsTbxYWU/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljL2ZkY2JjMjk3/LWE1ZDgtNGNhMy1h/ZDczLWYwMjZkNmUw/YWI1MQ)  |
+
 | Account | Login |
 |-----------------------|-----------------------|
 | ![Account](https://img.playbook.com/PfQ6UWNExzfxTcDfSN93driO9t0R8LZHdi_LKLGeNr8/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzkxZTk3MGIz/LWQxNzEtNDM5NC1h/Nzc3LWI2OTlhYTc4/YjUxZQ)  | ![Login](https://img.playbook.com/QE00wq0e-KvxfpthPUBpPBKvf4d8ggApT5MnLcObmdk/Z3M6Ly9wbGF5Ym9v/ay1hc3NldHMtcHVi/bGljLzlkZWViNTYw/LWY4NjktNGFiMy04/NDQ4LTliZGFhNmM3/YzQ2Mw)  |
